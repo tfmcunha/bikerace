@@ -1,0 +1,12 @@
+.clock_fields {
+	font-size: 20px;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
