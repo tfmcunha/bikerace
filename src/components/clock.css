@@ -1,8 +1,12 @@
 .clock_fields {
-	font-size: 20px;
-	padding: 10px;
-	border: 1px solid black;
-	border-radius: 5px;
+	width: 130px;
+	padding: 5px;
+}
+
+@media screen and (max-width: 767px) {
+	.clock_fields {
+		width: 95px;
+	}
 }
 
 .sidebar {

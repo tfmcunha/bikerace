@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Jumbotron } from 'react-bootstrap';
+import CircularProgressbar from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import './clock.css';
 
 
@@ -12,10 +14,9 @@ class Clock extends Component {
 			hours: 0,
 			minutes: 0,
 			seconds: 0,
-			deadline: "4 1, 2020",			
+			deadline: "April 1, 2020",			
 		}		
-	}	  	
-
+	}
 	getTimeUntil(dl) {
 		const time = Date.parse(dl) - Date.parse(new Date());		
 		const days = Math.floor(time/(1000*60*60*24));
@@ -35,39 +36,54 @@ class Clock extends Component {
 	}
 
   	render() {
+  		
 	    return (
 	    	
-		    		<Jumbotron className="text-center sidebar">
-			    		<h2>STARTS IN</h2>
-			    		<Row>
-			    			<Col xs={3} md={12}>
-					    		<div className="clock_fields">
-					    			<div>{this.state.days}</div>
-					    			<div>days</div>
-					    		</div>
-					    	</Col>
+		    		<Jumbotron className="d-flex justify-content-center text-center sidebar">
+		    			<div>
+				    		<h2>{this.state.deadline}</h2>
+				    		<Row>
+				    			<Col xs={3} md={12}>
+						    		<div className="clock_fields">
+						    			<CircularProgressbar
+									        percentage={(this.state.days*100)/400}
+									        text={`${this.state.days}`}
+									        counterClockwise
+									    />
+						    		</div>
+						    	</Col>
 
-					    	<Col xs={3} md={12}>
-					    		<div className="clock_fields">
-					    			<div>{this.state.hours}</div>
-					    			<div>hours</div>
-					    		</div>
-					    	</Col>
+						    	<Col xs={3} md={12}>
+						    		<div className="clock_fields">
+							    		<CircularProgressbar
+									        percentage={(this.state.hours*100)/24}
+									        text={`${this.state.hours}`}
+									        counterClockwise
+									    />
+									</div>
+						    	</Col>
 
-					    	<Col xs={3} md={12}>
-					    		<div className="clock_fields">
-					    			<div>{this.state.minutes}</div>
-					    			<div>minutes</div>
-					    		</div>
-					    	</Col>
+						    	<Col xs={3} md={12}>
+						    		<div className="clock_fields">
+							    		<CircularProgressbar
+									        percentage={(this.state.minutes*100)/60}
+									        text={`${this.state.minutes}`}
+									        counterClockwise
+									    />
+									</div>
+						    	</Col>
 
-				    		<Col xs={3} md={12}>
-					    		<div className="clock_fields">
-					    			<div>{this.state.seconds}</div>
-					    			<div>seconds</div>
-					    		</div>
-					    	</Col>
-				    	</Row>
+					    		<Col xs={3} md={12}>
+					    			<div className="clock_fields">
+							    		<CircularProgressbar
+									        percentage={(this.state.seconds*100)/60}
+									        text={this.state.seconds}
+									        counterClockwise
+									    />
+									</div>
+						    	</Col>	
+					    	</Row>
+					    </div>
 			    	</Jumbotron>	
 		      	
 	   	);

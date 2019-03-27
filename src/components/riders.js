@@ -28,19 +28,20 @@ class Riders extends Component {
   	render() {
 
   		var riders = this.state.riders;
-
+  		
 	    return (
 		    	<div>
-		    		<h1>RIDERS</h1>		    	
+		    		<h1>MEET THE PLAYERS!</h1>		    	
 		    		<Row>
 		    			{riders.map(rider => (
-		    				<Col xs={6} sm={2} key={rider.id}>          
-		    					{rider.first_name} {rider.last_name}				    					
+		    				<Col xs={6} sm={3} key={rider.id}>
+		    					<div class="postit text-center">{rider.first_name}<br />{rider.last_name}</div>
 		    				</Col>
 		    			))}
 		    		</Row>	
+		    		<h1>FOLLOW THE ACTION!!</h1>
 		    		<div className="mapContainer">
-		    			<Locations  riders={riders} />
+		    			<Locations riders={riders} />
 		    		</div>
 		      	</div>		    
 	   	);

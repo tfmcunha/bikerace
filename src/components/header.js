@@ -7,7 +7,7 @@ class Header extends Component {
   	render() {
     	return (
     		<Col xs={12}>
-    			<Row>
+    			<Row className="banner">
     				<h1>BOULDER BIKE RACE 2020</h1>
     			</Row>
 
@@ -17,8 +17,7 @@ class Header extends Component {
 		                	<Nav>
 			                	<Nav.Item className="hvr-sweep-to-right"><Link className="nav-link" to="/">Home</Link></Nav.Item>
 			                  <Nav.Item className="hvr-sweep-to-right"><Link className="nav-link" to="/riders">Riders</Link></Nav.Item>
-			                  <Nav.Item className="hvr-sweep-to-right"><Link className="nav-link" to="/gallery">Gallery</Link></Nav.Item>
-			                  <Nav.Item className="hvr-sweep-to-right"><Link className="nav-link" to="/contest">Contest</Link></Nav.Item>
+			                  <Nav.Item className="hvr-sweep-to-right"><Link className="nav-link" to="/gallery">Gallery</Link></Nav.Item>			                  
 			                </Nav>
 		                </Navbar>
 		            </Col>

@@ -16,7 +16,8 @@ class Gallery extends Component {
   }  
 
   componentDidMount() {
-    fetch('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=04a20a2b3cc6df93823ddc27d5e99ef7&tags=bikerace%2C+BoulderBikeTour&format=json&nojsoncallback=1&api_sig=6652e8374297ffb90a9b60a388e615d0')
+    const apikey = process.env.REACT_APP_FLICKR_API_KEY;
+    fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apikey}&tags=bikerace%2C+BoulderBikeTour&format=json&nojsoncallback=1`)
       .then(response => response.json())
       .then(myjson => {
           this.setState({
@@ -40,6 +41,7 @@ class Gallery extends Component {
     );
     return (
           <Row>
+            <h1>#BoulderBikeTour</h1>
             <TransitionGroup className="d-flex align-content-start flex-wrap">
               {photosShown.map(photo => {          
                 var srcPath = 'https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg';
