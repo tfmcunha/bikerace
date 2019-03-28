@@ -73,5 +73,5 @@ class Locations extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: ('AIzaSyCRGNVyKCcxBbVo72_EGGHnOnJHrrFbdk0')
+  apiKey: (process.env.REACT_APP_GM_API_KEY)
 })(Locations)
