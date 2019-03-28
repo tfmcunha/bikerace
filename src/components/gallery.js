@@ -6,44 +6,44 @@ import "./gallery.css";
 
 class Gallery extends Component {
 
-  constructor(props) {
+  constructor(props) {    
     super(props);
-    this.state = {
+    this.state = {      
       photoArray: [],   
-      activePage: 1,
-      ipp: 40   
+      activePage: 1,           
+      ipp: 40,
+      totalPhotos: ""
     };
+    this.handlePageChange = this.handlePageChange.bind(this);
   }  
 
-  componentDidMount() {
+  fetchPhotos() {
     const apikey = process.env.REACT_APP_FLICKR_API_KEY;
-    fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apikey}&tags=bikerace%2C+BoulderBikeTour&format=json&nojsoncallback=1`)
+     fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apikey}&tags=bikerace%2C+BoulderBikeTour&per_page=${this.state.ipp}&page=${this.state.activePage}&format=json&nojsoncallback=1`)
       .then(response => response.json())
       .then(myjson => {
           this.setState({
-            photoArray: myjson.photos.photo
+            photoArray: myjson.photos.photo,
+            totalPhotos: myjson.photos.total
           })
         })
-    
+  }
+
+  componentDidMount() { 
+    this.fetchPhotos();
   }
   
-  handlePageChange = pageNumber => this.setState({ activePage: pageNumber });
+  handlePageChange(pageNumber) {        
+    this.setState({activePage: pageNumber}, () => {this.fetchPhotos()})            
+  }
 
-  render() {
-    let photoArray = this.state.photoArray; 
-    
-    let ipp = this.state.ipp
-    let lastPhoto = this.state.activePage * ipp;
-    let firstPhoto = lastPhoto - ipp;
-    let photosShown = this.state.photoArray.slice(
-      firstPhoto,
-      lastPhoto
-    );
+  render() {    
+    let photoArray = this.state.photoArray;
     return (
           <Row>
             <h1>#BoulderBikeTour</h1>
             <TransitionGroup className="d-flex align-content-start flex-wrap">
-              {photosShown.map(photo => {          
+              {photoArray.map(photo => {          
                 var srcPath = 'https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg';
                   return ( 
                       <CSSTransition  
@@ -62,8 +62,8 @@ class Gallery extends Component {
             </TransitionGroup>
               <Pagination
                 activePage={this.state.activePage}
-                itemsCountPerPage={ipp}
-                totalItemsCount={photoArray.length}            
+                itemsCountPerPage={this.state.ipp}
+                totalItemsCount={this.state.totalPhotos}            
                 onChange={this.handlePageChange}
                 onClick={window.scrollTo(0,0)}
                 hideFirstLastPages={true}
