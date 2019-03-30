@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import './riders.css';
+import './css/riders.css';
 import Locations from './locations';
 
 class Riders extends Component {
@@ -11,6 +11,7 @@ class Riders extends Component {
 			riders: []
 		}
 	}	  	
+
 
 	componentDidMount() {
 		fetch('http://localhost:3001/riders')	

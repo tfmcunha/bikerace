@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col, Image } from 'react-bootstrap';
 import Pagination from "react-js-pagination";
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import "./gallery.css";
+import "./css/gallery.css";
 
 class Gallery extends Component {
 
