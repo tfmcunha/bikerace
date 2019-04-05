@@ -41,7 +41,7 @@ class Gallery extends Component {
     let photoArray = this.state.photoArray;
     return (
           <Row>
-            <h1>#BoulderBikeTour</h1>
+            <h1>#BOULDERBIKETOUR</h1>
             <TransitionGroup className="d-flex align-content-start flex-wrap">
               {photoArray.map(photo => {          
                 var srcPath = 'https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg';

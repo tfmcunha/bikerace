@@ -12,7 +12,7 @@ class Home extends Component {
 	    return (
 	    	<Row>
 	    		<Col xs={12}>
-	    			<h1>The biggest event in biking scene is back!</h1>
+	    			<h1 class="text-uppercase">The biggest event in biking scene is back!</h1>
 	    			<p>On April 1st, 2020, some of the best athlets on 2 wheels will faceoff on one of the most challenging scenarios in the world!</p>
 	    		</Col>
                 <Col xs={12} lg={6}>   
@@ -23,7 +23,7 @@ class Home extends Component {
                 <Col xs={12} lg={6}>   
                 	<div class="contest">
 	                	<div class="inner">             	
-		                	<h1>Be part of the action!</h1>
+		                	<h1 class="text-uppercase">Be part of the action!</h1>
 		                	<p>Create a slogan for <b>Boulder Bike Race 2020</b>! and win prizes!! <Link to="/contest">Click here!</Link></p>
 		                </div>
 		            </div>

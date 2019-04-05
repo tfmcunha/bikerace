@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Jumbotron } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import CircularProgressbar from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import './css/clock.css';
@@ -39,8 +39,8 @@ class Clock extends Component {
   		
 	    return (
 	    	
-		    		<Jumbotron className="d-flex justify-content-center text-center sidebar">
-		    			<div>
+		    		<div class="d-flex justify-content-center text-center sidebar mt-5">
+		    			<div class="layer p-4">
 				    		<h2>{this.state.deadline}</h2>
 				    		<Row>
 				    			<Col xs={3} md={12} className="px-0">						    		
@@ -80,7 +80,7 @@ class Clock extends Component {
 						    	</Col>	
 					    	</Row>
 					    </div>
-			    	</Jumbotron>	
+			    	</div>	
 		      	
 	   	);
 	}

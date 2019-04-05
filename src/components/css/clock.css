@@ -3,14 +3,26 @@
 	padding: 5px;
 }
 
-@media screen and (max-width: 767px) {
-	.clock_fields {
-		width: 85px
-	}
-}
-
 .sidebar {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  background-image: url("/images/vertical.jpg");
+  background-size: cover;
+}
+
+.layer {
+	background-color: rgba(255,255,255,0.5);
+	width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+	.clock_fields {
+		width: 23vw;		
+	}
+	
+	.sidebar {
+		background-image: url("/images/horizontal.jpg");
+  		background-size: cover;
+	}
 }

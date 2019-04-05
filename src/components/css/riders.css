@@ -22,21 +22,3 @@
   background: -ms-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* IE10+ */
   background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
-
-.postit:after {     
-  content: "";
-  position:absolute;
-  z-index:-1;
-  right: 15px; bottom:25px;
-  width: 75px;
-  height: 25px;
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow: 40px 27px 5px rgba(0, 0, 0, 0.40);  
-  transform:skew(10deg,10deg) translate(-45px,-15px)
-}
-
-@media screen and (max-width: 767px) {
-  .postit:after {
-    width: 95px;
-  }
-}

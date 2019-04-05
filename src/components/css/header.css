@@ -1,3 +1,30 @@
+@font-face {
+  font-family: headerFont;
+  src: url(/ABITE.ttf);
+}
+
+@font-face {
+  font-family: MenuFont;
+  src: url(/XEROXMAL.ttf);
+}
+
+.banner {
+  background-image: url("/images/mountain.jpg");
+  background-size: cover;
+}
+
+.title {
+  width: 100%;
+  font-family: headerFont;
+  font-size: 5.9vh;
+}
+.navbar {
+  width: 100%;    
+}
+.nav-link {
+  font-family: MenuFont;
+  font-size:30px;
+}
 
 .hvr-sweep-to-right {
   display: inline-block;

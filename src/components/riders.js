@@ -14,7 +14,7 @@ class Riders extends Component {
 
 
 	componentDidMount() {
-		fetch('http://localhost:3001/riders')	
+		fetch('https://bbt-server.herokuapp.com/riders')	
 			.then(response => response.json())
 			.then(json => {
 				this.setState({
