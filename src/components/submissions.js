@@ -77,7 +77,7 @@ class Submissions extends Component {
   handleSubmit(e) {    
     e.preventDefault();
     if (this.validateForm()) {
-      fetch('http://localhost:3001/submissions', {
+      fetch('http://localhost:3001/slogans', {
         method: 'post',
         headers: {
           "Accept": "application/json",
@@ -92,7 +92,7 @@ class Submissions extends Component {
       fields["slogan"] = ""; 
       this.setState({        
         fields,
-        message: "Sent Successfully!", 
+        message: "Sent Successfully! Good luck!", 
         modalShow: true
       });      
       
@@ -105,12 +105,13 @@ class Submissions extends Component {
 
     return (
       <div>
-        <h1>Submit your slogan!</h1>
-        <p> Send us a slogan with a minimum 50 characters! The winner wins:
+        <h1 class="text-uppercase">Submit your slogan!</h1>
+        <p> Send us a slogan with a minimum 50 characters! The winner gets:
           <ul>
             <li>$500.00 cash prize!</li>
             <li>VIP access to backstage!</li>
             <li>Invitations to party events before and after the race!</li>
+            <li>His slogan used for promoting the event</li>
           </ul>
         </p>
         <Form onSubmit={this.handleSubmit}>

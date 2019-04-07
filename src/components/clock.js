@@ -41,7 +41,7 @@ class Clock extends Component {
 	    	
 		    		<div class="d-flex justify-content-center text-center sidebar mt-5">
 		    			<div class="layer p-4">
-				    		<h2>{this.state.deadline}</h2>
+				    		<h1>COUNTDOWN!</h1>
 				    		<Row>
 				    			<Col xs={3} md={12} className="px-0">						    		
 						    			<CircularProgressbar

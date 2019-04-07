@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Image } from 'react-bootstrap';
+import Masonry from 'react-masonry-component';
 import Pagination from "react-js-pagination";
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import "./css/gallery.css";
 
 class Gallery extends Component {
@@ -12,7 +12,8 @@ class Gallery extends Component {
       photoArray: [],   
       activePage: 1,           
       ipp: 40,
-      totalPhotos: ""
+      totalPhotos: "",
+      loaded: false
     };
     this.handlePageChange = this.handlePageChange.bind(this);
   }  
@@ -24,7 +25,8 @@ class Gallery extends Component {
       .then(myjson => {
           this.setState({
             photoArray: myjson.photos.photo,
-            totalPhotos: myjson.photos.total
+            totalPhotos: myjson.photos.total,
+            loaded: true
           })
         })
   }
@@ -34,32 +36,33 @@ class Gallery extends Component {
   }
   
   handlePageChange(pageNumber) {        
-    this.setState({activePage: pageNumber}, () => {this.fetchPhotos()})            
+    this.setState({activePage: pageNumber, loaded: false}, () => {this.fetchPhotos()})            
   }
 
   render() {    
     let photoArray = this.state.photoArray;
     return (
           <Row>
-            <h1>#BOULDERBIKETOUR</h1>
-            <TransitionGroup className="d-flex align-content-start flex-wrap">
-              {photoArray.map(photo => {          
-                var srcPath = 'https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg';
-                  return ( 
-                      <CSSTransition  
-                        key={photo.id}
-                        timeout={1000}
-                        classNames={"fade"}
-                      > 
-
-                        <Col xs={12} sm={4} md={3} key={photo.id}>          
-                          <Image src={srcPath} thumbnail />                
-                        </Col>    
-                      </CSSTransition>    
-                  )
-                })
-              }
-            </TransitionGroup>
+            <Col>
+              <h1>#BOULDERBIKETOUR</h1>
+            {this.state.loaded === true ?
+              
+              <Masonry>
+                {photoArray.map(photo => {          
+                  var srcPath = 'https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg';
+                    return ( 
+                          
+                            <div class="w-25"><a href={srcPath}><Image src={srcPath} thumbnail/></a></div>                
+                         
+                    )
+                  })
+                }
+              </Masonry>            
+            :
+              <div class="w-50 mx-auto" >
+                <Image src="/images/loading.jpg" fluid />
+              </div>
+            }
               <Pagination
                 activePage={this.state.activePage}
                 itemsCountPerPage={this.state.ipp}
@@ -71,9 +74,8 @@ class Gallery extends Component {
                 nextPageText={"Next"}
               />
             
-
-          </Row>
-         
+            </Col>
+          </Row>         
     );
   }
 }
