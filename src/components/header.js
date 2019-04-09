@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Row, Col, Navbar, Nav } from 'react-bootstrap';
 import './css/header.css';
 
@@ -13,13 +13,13 @@ class Header extends Component {
 
     			<Row>
 	    			<Col xs={12}>
-		                <Navbar className="d-flex justify-content-center">
-		                	<Nav className="text-center">
-			                	<Nav.Item className="hvr-sweep-to-right"><Link className="nav-link" to="/">Home</Link></Nav.Item>
-			                  <Nav.Item className="hvr-sweep-to-right"><Link className="nav-link" to="/riders">Riders</Link></Nav.Item>
-			                  <Nav.Item className="hvr-sweep-to-right"><Link className="nav-link" to="/gallery">Gallery</Link></Nav.Item>			                  
+		               
+		                	<Nav className="d-flex justify-content-center text-center">
+			                	<Nav.Item className="hvr-sweep-to-top"><NavLink activeClassName="selected" className="nav-link" exact to="/">Home</NavLink></Nav.Item>
+			                  <Nav.Item className="hvr-sweep-to-top"><NavLink activeClassName="selected" className="nav-link" exact to="/riders">Riders</NavLink></Nav.Item>
+			                  <Nav.Item className="hvr-sweep-to-top"><NavLink activeClassName="selected" className="nav-link" exact to="/gallery">Gallery</NavLink></Nav.Item>			                  
 			                </Nav>
-		                </Navbar>
+		              
 		            </Col>
     			</Row>
     		</Col>  		

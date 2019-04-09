@@ -36,19 +36,18 @@ class Riders extends Component {
 		    	<div>
 		    		<h1>MEET THE PLAYERS!</h1>		
 		    		{this.state.loaded === true ?
-		    			<Row className="m-0">
-		    				<div class="border p-3">
+		    			<Row className="border m-1">		    				
 				    			{riders.map(rider => (
 				    				<Col xs={6} sm={3} key={rider.id}>
-				    					<div class="postit text-center">{rider.first_name}<br />{rider.last_name}</div>
+				    					<div class="postit text-center mt-3">{rider.first_name}<br />{rider.last_name}</div>
 				    				</Col>
 				    			))}
-				    		</div>
+				    		
 			    		</Row>	
 			    	:
-			    		<div class="w-50 mx-auto" >
+			    		<div class="w-50 mx-auto">
 			                <Image src="/images/loading.jpg" fluid />
-			             </div>
+			            </div>
 		    		}
 		    		
 		    		<h1>FOLLOW THE ACTION!!</h1>

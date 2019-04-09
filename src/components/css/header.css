@@ -17,6 +17,7 @@
   width: 100%;
   font-family: headerFont;
   font-size: 5.9vh;
+  color: white;
 }
 .navbar {
   width: 100%; 
@@ -27,7 +28,16 @@
   font-size:30px;
 }
 
-.hvr-sweep-to-right {
+.nav-item {
+  padding: 0 !important;
+
+}
+
+.nav-item > a {
+  color: white;
+}
+
+.hvr-sweep-to-top {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -36,10 +46,10 @@
   position: relative;
   -webkit-transition-property: color;
   transition-property: color;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
-.hvr-sweep-to-right:before {
+.hvr-sweep-to-top:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -47,25 +57,34 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom-right-radius: 50px;
-  border-top-right-radius: 50px;
-  box-shadow: 0 10px 13px -7px rgba(11, 105, 90, 0.6);
-  background: rgb(19, 172, 146);
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
-  transform-origin: 0 50%;
+  background: white;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
   -webkit-transition-property: transform;
   transition-property: transform;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
-  color: white;
+
+.hvr-sweep-to-top:hover:before, .hvr-sweep-to-top:focus:before, .hvr-sweep-to-top:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
 }
-.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+
+.nav-item > a:hover, a:focus, a:active {
+  color: #895d36;
 }
+
+.nav-item > a:active, a:focus {
+  background-color: white
+}
+
+.selected {
+  background-color: white;
+  color: #895d36 !important;
+}
+

@@ -13,7 +13,7 @@ class Home extends Component {
 	    	<Row>
 	    		<Col xs={12} className="my-5">
 	    			<h1 class="text-uppercase">The biggest event in biking scene is back!</h1>
-	    			<h2 class="py-3">On April 1st, 2020, some of the best athlets on 2 wheels will faceoff on one of the most challenging scenarios in the world!</h2>
+	    			<h2 class="py-3 text-justify">On April 1st, 2020, some of the best athlets on 2 wheels will faceoff on one of the most challenging scenarios in the world!</h2>
 	    		</Col>
                 <Col xs={12} lg={6}>   
                 	<div>             	
@@ -24,7 +24,8 @@ class Home extends Component {
                 	<div class="contest">
 	                	<div class="inner">             	
 		                	<h1 class="text-uppercase">Be part of the action!</h1>
-		                	<p class="text-justify">Create a slogan for <b>Boulder Bike Race 2020</b>! and win prizes!! <Link to="/contest">Click here!</Link></p>
+		                	<p class="text-justify">Create a slogan for <b>Boulder Bike Race 2020</b>! and win prizes!! </p>
+		                	<Link to="/contest">Click here!</Link>
 		                </div>
 		            </div>
 	            </Col>
