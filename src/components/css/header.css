@@ -28,11 +28,6 @@
   font-size:30px;
 }
 
-.nav-item {
-  padding: 0 !important;
-
-}
-
 .nav-item > a {
   color: white;
 }

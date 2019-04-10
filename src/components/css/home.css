@@ -1,7 +1,13 @@
+.intro {
+	background-image: url('/images/downhill.jpg');	
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
 .contest {
 	height: 315px;
 	background-image: url('/images/winner.jpg');
-
+	background-size: cover;
 	padding: 20px;
 }
 

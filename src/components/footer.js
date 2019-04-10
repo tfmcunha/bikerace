@@ -11,24 +11,24 @@ class Footer extends Component {
   	render() {
     	return (
     		<Col xs={12}>
-    			<Navbar fixed="bottom" className="myfooter justify-content-end" >
+    			<Navbar fixed="bottom" className="myfooter justify-content-center" >
 	    			<Nav className="mr-1">
-	                    <Nav.Item>
+	                    <Nav.Item className="social">
 	                    	<Nav.Link href="mailto:tcunha_lp@hotmail.com">
 	                    		<FontAwesomeIcon icon={faEnvelope} />
 	                    	</Nav.Link>
 	                    </Nav.Item>
-	                    <Nav.Item>
+	                    <Nav.Item className="social">
 	                    	<Nav.Link href="http://www.facebook.com" target="blank">
 	                    		<FontAwesomeIcon icon={faFacebook} />
 	                    	</Nav.Link>
 	                    </Nav.Item>
-	                    <Nav.Item>
+	                    <Nav.Item className="social">
 	                    	<Nav.Link href="http://www.twitter.com" target="blank">
 	                    		<FontAwesomeIcon icon={faTwitter} />
 	                    	</Nav.Link>
 	                    </Nav.Item>
-	                    <Nav.Item>
+	                    <Nav.Item className="social">
 	                    	<Nav.Link href="http://www.instagram.com" target="blank">
 	                    		<FontAwesomeIcon icon={faInstagram} />
 	                    	</Nav.Link>

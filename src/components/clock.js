@@ -39,44 +39,47 @@ class Clock extends Component {
   		
 	    return (
 	    	
-		    		<div class="d-flex justify-content-center text-center sidebar mt-5">
+		    		<div class="sidebar mt-5">
 		    			<div class="layer p-4">
-				    		<h1>COUNTDOWN!</h1>
+				    		<h1 class="text-center">COUNTDOWN!</h1>
 				    		<Row>
-				    			<Col xs={3} md={12} className="px-0">						    		
-						    			<CircularProgressbar
-									        percentage={(this.state.days*100)/400}
-									        text={`${this.state.days}`}
-									        counterClockwise
-									        className="clock_fields"
-									    />						    		
+				    			<Col xs={3} md={12} className="cf-container p-1">	   		
+		                     		<CircularProgressbar
+			                            percentage={(this.state.days*100)/400}
+			                            className="clock_fields"
+			                            counterClockwise									        
+			                        />	                      
+		                      		<div class="pb-text">{this.state.days}<br />Days</div>			
 						    	</Col>
 
-						    	<Col xs={3} md={12} className="px-0">						    		
-							    		<CircularProgressbar
-									        percentage={(this.state.hours*100)/24}
-									        text={`${this.state.hours}`}
-									        counterClockwise
-									        className="clock_fields"
-									    />									
+						    	<Col xs={3} md={12} className="cf-container p-1">						    		
+						    		<CircularProgressbar
+								        percentage={(this.state.hours*100)/24}
+								        counterClockwise
+								        className="clock_fields"
+								    />
+			                     	<div class="pb-text">
+			                      		<div>{this.state.hours}</div>
+			                       		<div>Hours</div>
+			                        </div>		
 						    	</Col>
 
-						    	<Col xs={3} md={12} className="px-0">						    		
-							    		<CircularProgressbar
-									        percentage={(this.state.minutes*100)/60}
-									        text={`${this.state.minutes}`}
-									        counterClockwise
-									        className="clock_fields"
-									    />									
+						    	<Col xs={3} md={12} className="cf-container p-1">						    		
+						    		<CircularProgressbar
+								        percentage={(this.state.minutes*100)/60}
+								        counterClockwise
+								        className="clock_fields"
+								    />									
+                    				<div class="pb-text">{this.state.minutes}<br />Minutes</div>
 						    	</Col>
 
-					    		<Col xs={3} md={12} className="px-0">					    			
-							    		<CircularProgressbar
-									        percentage={(this.state.seconds*100)/60}
-									        text={this.state.seconds}
-									        counterClockwise
-									        className="clock_fields"
-									    />									
+					    		<Col xs={3} md={12} className="cf-container p-1">					    			
+						    		<CircularProgressbar
+								        percentage={(this.state.seconds*100)/60}
+								        counterClockwise
+								        className="clock_fields"
+								    />
+                     				<div class="pb-text">{this.state.seconds}<br />Seconds</div>	
 						    	</Col>	
 					    	</Row>
 					    </div>

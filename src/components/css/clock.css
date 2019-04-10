@@ -1,6 +1,20 @@
+.cf-container {
+  position: relative;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+}
 .clock_fields {
 	width: 130px;
 	padding: 5px;
+}
+
+.pb-text {
+   position: absolute;
+   width: 100%; 
+   text-align: center;
+   color: darkblue;
+   
 }
 
 .sidebar {
@@ -16,13 +30,13 @@
 	width: 100%;
 }
 
-@media screen and (max-width: 767px) {
-	.clock_fields {
-		width: 23vw;		
-	}
-	
+@media screen and (max-width: 767px) {	
 	.sidebar {
 		background-image: url("/images/horizontal.jpg");
-  		background-size: cover;
+  	background-size: cover;
 	}
+}
+
+.CircularProgressbar-path {
+  stroke: #2e3fa7 !important;
 }
