@@ -1,21 +1,15 @@
-.fade-exit {
-	opacity: 1;
+.set-image {
+	width: 100%;
 }
 
-.fade-exit.fade-exit-active {
-	opacity: 0;
-	transition: opacity 1000ms linear
+@media only screen and (min-width: 768px) {
+	.set-image {
+		width: 50%;
+	}
 }
 
-.fade-exit-done {
-	opacity: 0
-}
-
-.fade-enter {
-	opacity: 0;
-}
-
-.fade-enter.fade-enter-active {
-	opacity: 1;
-	transition: opacity 2000ms linear
+@media only screen and (min-width: 992px) {
+	.set-image {
+		width: 25%;
+	}
 }

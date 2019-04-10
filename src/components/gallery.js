@@ -13,9 +13,9 @@ class Gallery extends Component {
       activePage: 1,           
       ipp: 40,
       totalPhotos: "",
-      loaded: false
+      loaded: false,      
     };
-    this.handlePageChange = this.handlePageChange.bind(this);
+    this.handlePageChange = this.handlePageChange.bind(this);    
   }  
 
   fetchPhotos() {
@@ -41,6 +41,7 @@ class Gallery extends Component {
 
   render() {    
     let photoArray = this.state.photoArray;
+    
     return (
           <Row>
             <Col>
@@ -51,9 +52,7 @@ class Gallery extends Component {
                 {photoArray.map(photo => {          
                   var srcPath = 'https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg';
                     return ( 
-                          
-                            <div class="w-25"><a href={srcPath}><Image src={srcPath} thumbnail/></a></div>                
-                         
+                              <div class="set-image"><Image src={srcPath} thumbnail /></div>                          
                     )
                   })
                 }
@@ -63,6 +62,7 @@ class Gallery extends Component {
                 <Image src="/images/loading.jpg" fluid />
               </div>
             }
+              
               <Pagination
                 activePage={this.state.activePage}
                 itemsCountPerPage={this.state.ipp}
