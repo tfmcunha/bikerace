@@ -30,13 +30,22 @@
 	width: 100%;
 }
 
+.CircularProgressbar-path {
+  stroke: #2e3fa7 !important;
+}
+
+.value {
+  font-size: 30px; 
+}
+
 @media screen and (max-width: 767px) {	
 	.sidebar {
 		background-image: url("/images/horizontal.jpg");
   	background-size: cover;
 	}
+
+  .value {
+    font-size: 20px;
+  }
 }
 
-.CircularProgressbar-path {
-  stroke: #2e3fa7 !important;
-}

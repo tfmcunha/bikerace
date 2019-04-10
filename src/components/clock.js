@@ -49,7 +49,10 @@ class Clock extends Component {
 			                            className="clock_fields"
 			                            counterClockwise									        
 			                        />	                      
-		                      		<div class="pb-text">{this.state.days}<br />Days</div>			
+		                      		<div class="pb-text">
+			                      		<div class="value">{this.state.days}</div>
+			                       		<div>Days</div>
+			                        </div>			
 						    	</Col>
 
 						    	<Col xs={3} md={12} className="cf-container p-1">						    		
@@ -59,7 +62,7 @@ class Clock extends Component {
 								        className="clock_fields"
 								    />
 			                     	<div class="pb-text">
-			                      		<div>{this.state.hours}</div>
+			                      		<div class="value">{this.state.hours}</div>
 			                       		<div>Hours</div>
 			                        </div>		
 						    	</Col>
@@ -70,7 +73,10 @@ class Clock extends Component {
 								        counterClockwise
 								        className="clock_fields"
 								    />									
-                    				<div class="pb-text">{this.state.minutes}<br />Minutes</div>
+                    				<div class="pb-text">
+			                      		<div class="value">{this.state.minutes}</div>
+			                       		<div>Minutes</div>
+			                        </div>	
 						    	</Col>
 
 					    		<Col xs={3} md={12} className="cf-container p-1">					    			
@@ -79,7 +85,10 @@ class Clock extends Component {
 								        counterClockwise
 								        className="clock_fields"
 								    />
-                     				<div class="pb-text">{this.state.seconds}<br />Seconds</div>	
+                     				<div class="pb-text">
+			                      		<div class="value">{this.state.seconds}</div>
+			                       		<div>Seconds</div>
+			                        </div>		
 						    	</Col>	
 					    	</Row>
 					    </div>
