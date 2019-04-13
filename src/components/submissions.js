@@ -77,7 +77,7 @@ class Submissions extends Component {
   handleSubmit(e) {    
     e.preventDefault();
     if (this.validateForm()) {
-      fetch('http://localhost:3001/slogans', {
+      fetch('https://bbt-server.herokuapp.com/submissions', {
         method: 'post',
         headers: {
           "Accept": "application/json",
@@ -89,7 +89,6 @@ class Submissions extends Component {
       .then(data => console.log(data));
       e.target.reset();     
       let fields = {};
-      fields["slogan"] = ""; 
       this.setState({        
         fields,
         message: "Sent Successfully! Good luck!", 
