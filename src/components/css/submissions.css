@@ -1,0 +1,12 @@
+.errors {
+	color: red;
+	font-weight: bold;
+}
+
+.alert {
+	margin-top: 10px;
+	padding: 10px;
+	background-color: #8cd08c;
+	font-weight: bold;
+	text-align: center;
+}
