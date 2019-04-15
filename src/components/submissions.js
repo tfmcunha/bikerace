@@ -15,6 +15,7 @@ class Submissions extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);  
+    this.alertClose = this.alertClose.bind(this);  
   }
 
   handleChange(e) {
@@ -97,13 +98,24 @@ class Submissions extends Component {
     
   }
 
+  alertClose(e) {
+    this.setState({
+      showAlert: false
+    })
+  }
+
   render() {
 
     return (
       <div>
 
         {this.state.showAlert === true &&
-          <div class="alert">{this.state.alert.message}</div>        
+          <div class="alert">
+            {this.state.alert.message}
+            <button type="button" class="close" aria-label="Close" onClick={this.alertClose}>
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>        
         }
 
         <h1 class="text-uppercase">Submit your slogan!</h1>

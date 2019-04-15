@@ -31,7 +31,7 @@ class Riders extends Component {
   	render() {
 
   		var riders = this.state.riders;
-  		  		
+  		
 	    return (
 		    	<div>
 		    		<h1>MEET THE PLAYERS!</h1>		
