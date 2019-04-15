@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './css/home.css';
 
@@ -26,8 +26,8 @@ class Home extends Component {
                 	<div class="contest">
 	                	<div class="inner">             	
 		                	<h1 class="text-uppercase">Be part of the action!</h1>
-		                	<p class="text-justify">Create a slogan for <b>Boulder Bike Race 2020</b>! and win prizes!! </p>
-		                	<Link to="/contest">Click here!</Link>
+		                	<p class="text-justify">Create a slogan for <b>Boulder Bike Race</b>! and win prizes!! </p>
+		                	<Button variant="primary"><Link to="/contest">Click here!</Link></Button>
 		                </div>
 		            </div>
 	            </Col>

@@ -1,7 +1,8 @@
 .intro {
-	background-image: url('/images/downhill.jpg');	
+	background-image: url('/images/Sem nome2.jpg');	
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .contest {
@@ -13,8 +14,20 @@
 
 .inner {
 	position: relative;
-	width: 50%;
+	width: 60%;
 	height: 100%;
 	padding: 10px;
 	background-color: rgba(255,255,255,0.5)
+}
+
+@media (min-width: 767px) {
+	.inner {
+		width: 50%
+	}
+}
+
+.btn > a, .btn > a:focus, .btn > a:active {
+	color: white;
+	text-decoration: none;
+	background-color: transparent;
 }
