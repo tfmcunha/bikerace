@@ -1,10 +1,3 @@
-.intro {
-	background-image: url('/images/Sem nome2.jpg');	
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
 .contest {
 	height: 315px;
 	background-image: url('/images/winner.jpg');
