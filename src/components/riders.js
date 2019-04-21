@@ -39,7 +39,7 @@ class Riders extends Component {
 		    			<Row className="border m-1">		    				
 				    			{riders.map(rider => (
 				    				<Col xs={6} sm={3} key={rider.id}>
-				    					<div class="postit text-center mt-3">{rider.first_name}<br />{rider.last_name}</div>
+				    					<div className="postit text-center mt-3">{rider.first_name}<br />{rider.last_name}</div>
 				    				</Col>
 				    			))}
 				    		

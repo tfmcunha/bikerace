@@ -52,7 +52,7 @@ class Gallery extends Component {
                 {photoArray.map(photo => {          
                   var srcPath = 'https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg';
                     return ( 
-                              <div className="set-image"><Image src={srcPath} thumbnail /></div>                          
+                              <div key={photo.id} className="set-image"><Image src={srcPath} thumbnail /></div>                          
                     )
                   })
                 }

@@ -50,10 +50,11 @@ class Locations extends Component {
     	
           	{riders.map(rider => (
               <Marker
-                       title={rider.first_name}
-                       name={rider.first_name+' '+rider.last_name}
-                       position={{lat: rider.latitude, lng: rider.longitude}}
-                       onClick={this.onMarkerClick} />
+                      key={rider.id}
+                      title={rider.first_name}
+                      name={rider.first_name+' '+rider.last_name}
+                      position={{lat: rider.latitude, lng: rider.longitude}}
+                      onClick={this.onMarkerClick} />
                  		 
           	))}         
 
