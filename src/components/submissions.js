@@ -110,49 +110,49 @@ class Submissions extends Component {
       <div>
 
         {this.state.showAlert === true &&
-          <div class="alert">
+          <div className="alert">
             {this.state.alert.message}
-            <button type="button" class="close" aria-label="Close" onClick={this.alertClose}>
+            <button type="button" className="close" aria-label="Close" onClick={this.alertClose}>
               <span aria-hidden="true">&times;</span>
             </button>
           </div>        
         }
 
-        <h1 class="text-uppercase">Submit your slogan!</h1>
+        <h1 className="text-uppercase">Submit your slogan!</h1>
 
-        <p> Send us a slogan with a minimum 50 characters! The winner gets:
+        <div> Send us a slogan with a minimum 50 characters! The winner gets:
           <ul>
             <li>$500.00 cash prize!</li>
             <li>VIP access to backstage!</li>
             <li>Invitations to party events before and after the race!</li>
             <li>His slogan used for promoting the event</li>
           </ul>
-        </p>
+        </div>
         
         <Form onSubmit={this.handleSubmit}>
 
           <Form.Group>
             <Form.Label>First Name:</Form.Label> 
             <Form.Control type="text" autoComplete="off" name="first_name" value={this.state.first_name} onChange={this.handleChange} />
-            <div class="errors">{this.state.errors.first_name}</div>
+            <div className="errors">{this.state.errors.first_name}</div>
           </Form.Group> 
 
           <Form.Group>
             <Form.Label>Last Name:</Form.Label> 
             <Form.Control type="text" autoComplete="off" name="last_name" value={this.state.last_name} onChange={this.handleChange} />
-            <div class="errors">{this.state.errors.last_name}</div>
+            <div className="errors">{this.state.errors.last_name}</div>
           </Form.Group> 
 
           <Form.Group>
             <Form.Label>Email:</Form.Label> 
             <Form.Control type="email" autoComplete="off" name="email" value={this.state.email} onChange={this.handleChange} />
-            <div class="errors">{this.state.errors.email}</div>
+            <div className="errors">{this.state.errors.email}</div>
           </Form.Group> 
 
           <Form.Group>
             <Form.Label>Slogan:</Form.Label> 
             <Form.Control as="textarea" rows="3" autoComplete="off" name="slogan" value={this.state.slogan} onChange={this.handleChange} />
-            <div class="errors">{this.state.errors.slogan}</div>
+            <div className="errors">{this.state.errors.slogan}</div>
           </Form.Group> 
 
           <Button type="submit" value="Submit">Submit</Button>          

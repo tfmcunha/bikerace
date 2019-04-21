@@ -8,7 +8,7 @@ class Header extends Component {
     	return (
     		<Col xs={12} className="banner">
     			<Row>
-    				<h1 class="text-center title px-5">BOULDER BIKE TOUR</h1>
+    				<h1 className="text-center title px-5">BOULDER BIKE TOUR</h1>
     			</Row>
 
     			<Row>

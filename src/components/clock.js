@@ -39,9 +39,9 @@ class Clock extends Component {
   		
 	    return (
 	    	
-		    		<div class="sidebar mt-5">
-		    			<div class="layer p-4">
-				    		<h1 class="text-center">COUNTDOWN!</h1>
+		    		<div className="sidebar mt-5">
+		    			<div className="layer p-4">
+				    		<h1 className="text-center">COUNTDOWN!</h1>
 				    		<Row>
 				    			<Col xs={3} md={12} className="cf-container p-1">	   		
 		                     		<CircularProgressbar
@@ -49,8 +49,8 @@ class Clock extends Component {
 			                            className="clock_fields"
 			                            counterClockwise									        
 			                        />	                      
-		                      		<div class="pb-text">
-			                      		<div class="value">{this.state.days}</div>
+		                      		<div className="pb-text">
+			                      		<div className="value">{this.state.days}</div>
 			                       		<div>Days</div>
 			                        </div>			
 						    	</Col>
@@ -61,8 +61,8 @@ class Clock extends Component {
 								        counterClockwise
 								        className="clock_fields"
 								    />
-			                     	<div class="pb-text">
-			                      		<div class="value">{this.state.hours}</div>
+			                     	<div className="pb-text">
+			                      		<div className="value">{this.state.hours}</div>
 			                       		<div>Hours</div>
 			                        </div>		
 						    	</Col>
@@ -73,8 +73,8 @@ class Clock extends Component {
 								        counterClockwise
 								        className="clock_fields"
 								    />									
-                    				<div class="pb-text">
-			                      		<div class="value">{this.state.minutes}</div>
+                    				<div className="pb-text">
+			                      		<div className="value">{this.state.minutes}</div>
 			                       		<div>Minutes</div>
 			                        </div>	
 						    	</Col>
@@ -85,8 +85,8 @@ class Clock extends Component {
 								        counterClockwise
 								        className="clock_fields"
 								    />
-                     				<div class="pb-text">
-			                      		<div class="value">{this.state.seconds}</div>
+                     				<div className="pb-text">
+			                      		<div className="value">{this.state.seconds}</div>
 			                       		<div>Seconds</div>
 			                        </div>		
 						    	</Col>	

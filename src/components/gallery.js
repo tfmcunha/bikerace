@@ -52,13 +52,13 @@ class Gallery extends Component {
                 {photoArray.map(photo => {          
                   var srcPath = 'https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg';
                     return ( 
-                              <div class="set-image"><Image src={srcPath} thumbnail /></div>                          
+                              <div className="set-image"><Image src={srcPath} thumbnail /></div>                          
                     )
                   })
                 }
               </Masonry>            
             :
-              <div class="w-50 mx-auto" >
+              <div className="w-50 mx-auto" >
                 <Image src="/images/loading.jpg" fluid />
               </div>
             }

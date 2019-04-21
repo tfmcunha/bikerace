@@ -45,7 +45,7 @@ class Riders extends Component {
 				    		
 			    		</Row>	
 			    	:
-			    		<div class="w-50 mx-auto">
+			    		<div className="w-50 mx-auto">
 			                <Image src="/images/loading.jpg" fluid />
 			            </div>
 		    		}
